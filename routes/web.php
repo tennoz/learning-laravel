@@ -11,6 +11,13 @@ use App\Task;
 |
 */
 
-Route::get('/tasks', 'TaskController@index');
+Route::get('/', function() {
+	$tasks = [
+		'Clean the house.',
+		'Kill the intruders.'
+		'Destroy everything,'
+	]
+	return view('welcome', compact('tasks'));
+});
 
-Route::get('/tasks/{task}', 'TaskController@show');
+ 
